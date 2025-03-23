@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 22/03/25.
 //
 
+// Data models required to save the data
+
 import Foundation
 
 struct SendMoneyData: Codable {
@@ -28,8 +30,6 @@ struct Provider: Codable {
         case requiredFields = "required_fields"
     }
 }
-
-import Foundation
 
 struct Field: Codable {
     let label: [String: String]

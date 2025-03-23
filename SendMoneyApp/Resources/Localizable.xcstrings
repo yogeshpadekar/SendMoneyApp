@@ -18,18 +18,6 @@
         }
       }
     },
-    "Back" : {
-      "comment" : "Back button title",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "رجوع"
-          }
-        }
-      }
-    },
     "Change Language" : {
       "extractionState" : "manual",
       "localizations" : {

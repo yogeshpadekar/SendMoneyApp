@@ -5,6 +5,7 @@
 //  Created by Yogesh Padekar on 23/03/25.
 //
 
+// Enum to manage values which can be either strings, dictionaries or nil
 
 import Foundation
 

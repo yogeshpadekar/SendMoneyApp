@@ -16,14 +16,14 @@ struct DynamicFieldsView: View {
             ForEach(viewModel.fields, id: \.name) { field in
                 VStack(alignment: .leading) {
 
-                    // ✅ Field Label
+                    // Field Label
                     let localizedLabel = LanguageManager.shared.localizedFromJSON(dict: field.label)
                         ?? LanguageManager.shared.localizedString(forKey: "Field")
 
                     Text(localizedLabel)
                         .font(.headline)
 
-                    // ✅ TextField with Submit Navigation
+                    // TextField with Submit Navigation
                     TextField(
                         field.placeholder?.value ?? LanguageManager.shared.localizedString(forKey: "Enter value"),
                         text: Binding(
@@ -52,7 +52,7 @@ struct DynamicFieldsView: View {
                             .stroke(viewModel.formErrors[field.name] == nil ? Color.gray : Color.red, lineWidth: 1)
                     )
 
-                    // ✅ Display validation error
+                    // Display validation error
                     if let error = viewModel.formErrors[field.name] {
                         Text(error)
                             .foregroundColor(.red)
@@ -65,7 +65,7 @@ struct DynamicFieldsView: View {
         }
     }
 
-    // ✅ Move focus to the next field or dismiss the keyboard
+    // Move focus to the next field or dismiss the keyboard
     private func moveToNextField(after currentField: String) {
         let fieldNames = viewModel.fields.map { $0.name }
 

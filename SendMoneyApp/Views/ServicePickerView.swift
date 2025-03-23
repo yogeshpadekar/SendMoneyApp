@@ -23,7 +23,7 @@ struct ServicePickerView: View {
                 set: { newValue in
                     if let index = viewModel.services.firstIndex(where: { LanguageManager.shared.localizedFromJSON(dict: $0.label) == newValue }) {
                         viewModel.selectedServiceIndex = index
-                        viewModel.updateProviders()  // ✅ Update providers dynamically
+                        viewModel.updateProviders()  // Update providers dynamically
                     }
                 }
             )

@@ -24,7 +24,7 @@ struct ProviderPickerView: View {
                 set: { newValue in
                     if let index = viewModel.providers.firstIndex(where: { $0.name == newValue }) {
                         viewModel.selectedProviderIndex = index
-                        viewModel.updateFields()  // ✅ Update fields dynamically
+                        viewModel.updateFields()  // Update fields dynamically
                     }
                 }
             )

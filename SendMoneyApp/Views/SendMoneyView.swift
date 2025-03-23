@@ -11,7 +11,7 @@ struct SendMoneyView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = SendMoneyViewModel()
 
-    // ✅ State for toast notification
+    // State for toast notification
     @State private var showToast: Bool = false
     @State private var toastMessage: String = ""
 
@@ -39,7 +39,7 @@ struct SendMoneyView: View {
                     viewModel.loadData()
                 }
 
-                // ✅ Toast Display
+                // Toast Display
                 if showToast {
                     VStack {
                         Spacer()
@@ -68,7 +68,7 @@ struct SendMoneyView: View {
         }
     }
 
-    // ✅ Toast message
+    // Toast message
     private func showToastMessage(_ message: String) {
         toastMessage = message
         showToast = true

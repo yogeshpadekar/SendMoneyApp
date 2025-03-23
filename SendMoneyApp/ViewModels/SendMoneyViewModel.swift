@@ -28,7 +28,7 @@ class SendMoneyViewModel: ObservableObject {
     // MARK: - Load Data
     func loadData() {
         guard let url = Bundle.main.url(forResource: "SendMoneyData", withExtension: "json") else {
-            print("❌ JSON file not found")
+            debugPrint("JSON file not found")
             return
         }
 
@@ -42,7 +42,7 @@ class SendMoneyViewModel: ObservableObject {
 
             updateProviders()
         } catch {
-            print("❌ Failed to decode JSON: \(error)")
+            debugPrint("Failed to decode JSON: \(error)")
         }
     }
 
@@ -69,7 +69,7 @@ class SendMoneyViewModel: ObservableObject {
 
     // MARK: - Validation Logic
 
-    // ✅ Extract minimum length from regex pattern
+    // Extract minimum length from regex pattern
     private func getMinLength(from pattern: String) -> Int? {
         let minLengthRegex = "\\{(\\d+),"
 
@@ -83,13 +83,13 @@ class SendMoneyViewModel: ObservableObject {
                 return minLength
             }
         } catch {
-            print("❌ Error extracting min length: \(error)")
+            debugPrint("Error extracting min length: \(error)")
         }
 
         return nil
     }
 
-    // ✅ Check if a string contains only numerical characters
+    // Check if a string contains only numerical characters
     private func isNumeric(_ value: String) -> Bool {
         let digitSet = CharacterSet.decimalDigits
         return value.unicodeScalars.allSatisfy { digitSet.contains($0) }
@@ -102,19 +102,19 @@ class SendMoneyViewModel: ObservableObject {
         for field in fields {
             let value = formData[field.name]?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
 
-            // ✅ 1. Empty Field Check
+            // 1. Empty Field Check
             if value.isEmpty {
                 formErrors[field.name] = field.validationErrorMessage?.value ?? "This field is required"
                 continue
             }
 
-            // ✅ 2. Number-Only Validation for Number Fields
+            // 2. Number-Only Validation for Number Fields
             if field.type == "number", !isNumeric(value) {
                 formErrors[field.name] = "Only numbers are allowed"
                 continue
             }
 
-            // ✅ 3. Min & Max Length Validation
+            // 3. Min & Max Length Validation
             if field.maxLength > 0, value.count > field.maxLength {
                 formErrors[field.name] = "Max length is \(field.maxLength) characters"
                 continue
@@ -125,7 +125,7 @@ class SendMoneyViewModel: ObservableObject {
                 continue
             }
 
-            // ✅ 4. Regex Validation
+            // 4. Regex Validation
             if !field.validation.isEmpty {
                 if !matchesRegex(value, pattern: field.validation) {
                     formErrors[field.name] = field.validationErrorMessage?.value ?? "Invalid format"
@@ -136,12 +136,12 @@ class SendMoneyViewModel: ObservableObject {
         return formErrors.isEmpty
     }
 
-    // ✅ Helper to check if the field is the last one
+    // Helper to check if the field is the last one
     func isLastField(_ field: Field) -> Bool {
         return fields.last?.name == field.name
     }
 
-    // ✅ Strict regex validation using NSPredicate
+    // Strict regex validation using NSPredicate
     private func matchesRegex(_ value: String, pattern: String) -> Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
         return predicate.evaluate(with: value)

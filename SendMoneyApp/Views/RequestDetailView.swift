@@ -13,7 +13,7 @@ struct RequestDetailView: View {
 
     var body: some View {
         ScrollView {
-            // ✅ JSON-formatted request data
+            // JSON-formatted request data
             Text(prettyJSON(from: request))
                 .font(.system(size: 14, weight: .regular, design: .monospaced))
                 .padding()
@@ -25,7 +25,7 @@ struct RequestDetailView: View {
         .navigationTitle(LanguageManager.shared.localizedString(forKey: "Request JSON"))
     }
 
-    // ✅ Convert request data to pretty-formatted JSON
+    // Convert request data to pretty-formatted JSON
     private func prettyJSON(from request: SendMoneyRequest) -> String {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted

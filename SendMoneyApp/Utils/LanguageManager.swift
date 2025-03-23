@@ -13,7 +13,7 @@ class LanguageManager: ObservableObject {
 
     private var bundle: Bundle = .main
 
-    // ✅ Dynamically load the language bundle
+    // Dynamically load the language bundle
     func setLanguage(_ language: String) {
         if let path = Bundle.main.path(forResource: language, ofType: "lproj"),
            let newBundle = Bundle(path: path) {
@@ -24,7 +24,7 @@ class LanguageManager: ObservableObject {
         objectWillChange.send()
     }
 
-    // ✅ Localized string method with placeholder support
+    // Localized string method with placeholder support
     func localizedString(forKey key: String, arguments: CVarArg...) -> String {
         let format = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "\(key)", comment: "")
         return String(format: format, arguments: arguments)

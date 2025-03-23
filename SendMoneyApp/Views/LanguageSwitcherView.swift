@@ -23,7 +23,7 @@ struct LanguageSwitcherView: View {
                     .font(.title)
                     .bold()
 
-                // ✅ Language Picker
+                // Language Picker
                 Picker("Language", selection: $appState.selectedLanguage) {
                     ForEach(languages.keys.sorted(), id: \.self) { key in
                         Text(languages[key] ?? key).tag(key)

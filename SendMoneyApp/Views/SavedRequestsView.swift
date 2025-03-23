@@ -39,7 +39,7 @@ struct SavedRequestsView: View {
                     }
                     Spacer()
 
-                    // ✅ View JSON Button
+                    // View JSON Button
                     NavigationLink(destination: RequestDetailView(request: request)) {
                         Text(LanguageManager.shared.localizedString(forKey: "View JSON"))
                             .foregroundColor(.white)

@@ -11,13 +11,13 @@ class AppState: ObservableObject {
     @Published var isLoggedIn = false
     @Published var savedRequests: [SendMoneyRequest] = []
 
-    // ✅ Store language selection in UserDefaults
+    // Store language selection in UserDefaults
     @Published var selectedLanguage: String {
         didSet {
-            // ✅ Persist the selected language
+            // Persist the selected language
             UserDefaults.standard.set(selectedLanguage, forKey: Constants.userDefaultsLanguageKey)
             
-            // ✅ Apply new language instantly
+            // Apply new language instantly
             LanguageManager.shared.setLanguage(selectedLanguage)
         }
     }

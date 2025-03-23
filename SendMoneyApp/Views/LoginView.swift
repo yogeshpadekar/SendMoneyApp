@@ -16,13 +16,13 @@ struct LoginView: View {
 
     var body: some View {
         ZStack {
-            // ✅ Background gradient matching the app theme
+            // Background gradient
             LinearGradient(gradient: Gradient(colors: [Color.blue, Color.mint]),
                            startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
 
             VStack(spacing: 30) {
-                // ✅ App Logo or Title
+                // App Logo or Title
                 VStack {
                     Image(systemName: "person.crop.circle.fill.badge.checkmark")
                         .resizable()
@@ -37,7 +37,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                 }
 
-                // ✅ Input Fields
+                // Input Fields
                 VStack(spacing: 20) {
                     CustomTextField(icon: "person.fill",
                                     placeholder: LanguageManager.shared.localizedString(forKey: "Username"),
@@ -49,7 +49,7 @@ struct LoginView: View {
                 }
                 .padding(.horizontal, 30)
 
-                // ✅ Login Button
+                // Login Button
                 Button(action: handleLogin) {
                     Text(LanguageManager.shared.localizedString(forKey: "LOGIN"))
                         .font(.title2)
@@ -62,7 +62,7 @@ struct LoginView: View {
                 }
                 .padding(.horizontal, 30)
 
-                // ✅ Error Message
+                // Error Message
                 if showError {
                     Text(LanguageManager.shared.localizedString(forKey: "InvalidCredentials"))
                         .foregroundColor(.red)
@@ -78,7 +78,7 @@ struct LoginView: View {
         }
     }
 
-    // ✅ Handle Login Logic
+    // Handle Login Logic
     private func handleLogin() {
         if username.lowercased() == "testuser" && password == "password123" {
             appState.isLoggedIn = true
@@ -88,7 +88,7 @@ struct LoginView: View {
     }
 }
 
-// ✅ Custom TextField Component
+// Custom TextField Component
 struct CustomTextField: View {
     var icon: String
     var placeholder: String
@@ -111,7 +111,7 @@ struct CustomTextField: View {
     }
 }
 
-// ✅ Custom SecureField Component
+// Custom SecureField Component
 struct CustomSecureField: View {
     var icon: String
     var placeholder: String

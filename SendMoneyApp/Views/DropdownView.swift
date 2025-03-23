@@ -44,7 +44,7 @@ struct DropDownView: View {
                                 .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2))
             }
 
-            // ✅ Expanded Drop-down List
+            // Expanded Drop-down List
             if isExpanded {
                 ScrollView {
                     VStack(spacing: 0) {
