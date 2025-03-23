@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 22/03/25.
 //
 
+// Class to save the data while doing state management
+
 import Foundation
 
 class AppState: ObservableObject {

@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 22/03/25.
 //
 
+// Parse JSON and use the data to popuate the fields
+
 import SwiftUI
 
 class SendMoneyViewModel: ObservableObject {

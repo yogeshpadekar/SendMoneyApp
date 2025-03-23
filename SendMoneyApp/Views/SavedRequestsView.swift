@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 23/03/25.
 //
 
+// View responsible for showing the list of requests saved using ObservableObject AppState
+
 import SwiftUI
 
 struct SavedRequestsView: View {

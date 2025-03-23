@@ -5,6 +5,7 @@
 //  Created by Yogesh Padekar on 23/03/25.
 //
 
+// Class to manage dynamic language switch
 
 import Foundation
 

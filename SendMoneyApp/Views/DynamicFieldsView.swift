@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 23/03/25.
 //
 
+// Struct responsible to generate dynamic fields
+
 import SwiftUI
 
 struct DynamicFieldsView: View {

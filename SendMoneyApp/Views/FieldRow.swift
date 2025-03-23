@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 22/03/25.
 //
 
+// Row used to show dynamic data
+
 import SwiftUI
 
 struct FieldRow: View {

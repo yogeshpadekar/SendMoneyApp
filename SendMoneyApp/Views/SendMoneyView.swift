@@ -5,6 +5,8 @@
 //  Created by Yogesh Padekar on 22/03/25.
 //
 
+// View showing the UI to send the request
+
 import SwiftUI
 
 struct SendMoneyView: View {
