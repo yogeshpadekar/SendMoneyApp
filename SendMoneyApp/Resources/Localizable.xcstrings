@@ -1,0 +1,132 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Amount: %@" : {
+
+    },
+    "English" : {
+
+    },
+    "Invalid credentials" : {
+
+    },
+    "InvalidCredentials" : {
+      "comment" : "Error message for invalid login",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بيانات الاعتماد غير صالحة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid credentials"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "comment" : "Label for language picker",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللغة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        }
+      }
+    },
+    "Language:" : {
+
+    },
+    "Login" : {
+      "comment" : "Login button label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الدخول"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "comment" : "Password field label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة المرور"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        }
+      }
+    },
+    "Provider: %@" : {
+
+    },
+    "Request ID: %@" : {
+
+    },
+    "Request JSON" : {
+
+    },
+    "Saved Requests" : {
+
+    },
+    "SEND" : {
+
+    },
+    "Service: %@" : {
+
+    },
+    "Username" : {
+      "comment" : "Username field label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم المستخدم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Username"
+          }
+        }
+      }
+    },
+    "View JSON" : {
+
+    },
+    "العربية" : {
+
+    }
+  },
+  "version" : "1.0"
+}
