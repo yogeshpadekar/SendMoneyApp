@@ -22,8 +22,7 @@ extension StringOrDict {
         case .string(let str):
             return str.localized
         case .dictionary(let dict):
-            let locale = Locale.current.language.languageCode?.identifier ?? "en"
-            return dict[locale] ?? dict["en"] ?? "N/A"
+            return LanguageManager.shared.localizedFromJSON(dict: dict) ?? LanguageManager.shared.localizedString(forKey: "N/A")
         case .none:
             return ""
         }
@@ -42,8 +41,7 @@ extension SendMoneyViewModel {
 
     /// Localizes a dictionary based on the current locale
     func localized(_ dict: [String: String]) -> String {
-        let locale = Locale.current.language.languageCode?.identifier ?? "en"
-        return dict[locale] ?? dict["en"] ?? "N/A"
+        LanguageManager.shared.localizedFromJSON(dict: dict) ?? LanguageManager.shared.localizedString(forKey: "N/A")
     }
 
     /// Localizes a `StringOrDict` value
@@ -52,8 +50,7 @@ extension SendMoneyViewModel {
         case .string(let str):
             return str
         case .dictionary(let dict):
-            let locale = Locale.current.language.languageCode?.identifier ?? "en"
-            return dict[locale] ?? dict["en"] ?? "N/A"
+            return LanguageManager.shared.localizedFromJSON(dict: dict) ?? LanguageManager.shared.localizedString(forKey: "N/A")
         case .none:
             return ""
         }

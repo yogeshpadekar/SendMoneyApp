@@ -2,13 +2,49 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Amount: %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amount: %@"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
-    "English" : {
-
+    "Change Language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغيير اللغة"
+          }
+        }
+      }
     },
-    "Invalid credentials" : {
-
+    "Enter Value" : {
+      "comment" : "Default message to enter value",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل القيمة"
+          }
+        }
+      }
+    },
+    "Field" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حقل"
+          }
+        }
+      }
     },
     "InvalidCredentials" : {
       "comment" : "Error message for invalid login",
@@ -46,10 +82,7 @@
         }
       }
     },
-    "Language:" : {
-
-    },
-    "Login" : {
+    "LOGIN" : {
       "comment" : "Login button label",
       "extractionState" : "manual",
       "localizations" : {
@@ -62,7 +95,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Login"
+            "value" : "LOGIN"
+          }
+        }
+      }
+    },
+    "N/A" : {
+      "comment" : "Not Applicable",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير متوفر"
           }
         }
       }
@@ -85,23 +130,159 @@
         }
       }
     },
+    "Provider" : {
+      "comment" : "Provider Label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزود"
+          }
+        }
+      }
+    },
     "Provider: %@" : {
-
+      "comment" : "Provider value with label",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزود: %@"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "Request ID: %@" : {
-
+      "comment" : "Request ID value with label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معرف الطلب: %@"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "Request JSON" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طلب JSON"
+          }
+        }
+      }
+    },
+    "Request saved successfully!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم حفظ الطلب بنجاح!"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAVE"
+          }
+        }
+      }
     },
     "Saved Requests" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطلبات المحفوظة"
+          }
+        }
+      }
+    },
+    "Select Language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر اللغة"
+          }
+        }
+      }
     },
     "SEND" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إرسال"
+          }
+        }
+      }
+    },
+    "Send Money" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إرسال الأموال"
+          }
+        }
+      }
+    },
+    "Service" : {
+      "comment" : "Service Label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخدمة"
+          }
+        }
+      }
     },
     "Service: %@" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخدمة: %@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Unknown Service" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خدمة غير معروفة"
+          }
+        }
+      }
     },
     "Username" : {
       "comment" : "Username field label",
@@ -122,10 +303,26 @@
       }
     },
     "View JSON" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض JSON"
+          }
+        }
+      }
     },
-    "العربية" : {
-
+    "View Requests" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الطلبات"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

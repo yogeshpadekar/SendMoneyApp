@@ -25,14 +25,14 @@ struct ServiceDetailView: View {
                 }
             }
         }
-        .navigationTitle(service.label["en"] ?? service.name)
+        .navigationTitle(LanguageManager.shared.localizedFromJSON(dict: service.label) ?? service.name)
     }
 
     // MARK: - Extracted Field View
     @ViewBuilder
     private func fieldView(for field: Field) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(field.label["en"] ?? field.name)
+            Text(LanguageManager.shared.localizedFromJSON(dict: field.label) ?? field.name)
                 .font(.headline)
 
             TextField(
@@ -46,13 +46,14 @@ struct ServiceDetailView: View {
 
     // MARK: - Helper to Get Placeholder Text
     private func placeholderText(for placeholder: StringOrDict?) -> String {
+       let defaultPlaceholder = LanguageManager.shared.localizedString(forKey: "Enter value")
         switch placeholder {
         case .string(let value):
             return value
         case .dictionary(let dict):
-            return dict["en"] ?? "Enter value"
+            return LanguageManager.shared.localizedFromJSON(dict: dict) ?? defaultPlaceholder
         default:
-            return "Enter value"
+            return defaultPlaceholder
         }
     }
 }

@@ -44,7 +44,7 @@ enum StringOrDict: Codable {
         case .string(let stringValue):
             return stringValue
         case .dictionary(let dictValue):
-            return dictValue["en"] ?? ""
+            return LanguageManager.shared.localizedFromJSON(dict: dictValue) ?? ""
         case .none:
             return ""
         }

@@ -17,12 +17,15 @@ struct DynamicFieldsView: View {
                 VStack(alignment: .leading) {
 
                     // ✅ Field Label
-                    Text(field.label["en"] ?? "Field")
+                    let localizedLabel = LanguageManager.shared.localizedFromJSON(dict: field.label)
+                        ?? LanguageManager.shared.localizedString(forKey: "Field")
+
+                    Text(localizedLabel)
                         .font(.headline)
 
                     // ✅ TextField with Submit Navigation
                     TextField(
-                        field.placeholder?.value ?? "Enter value",
+                        field.placeholder?.value ?? LanguageManager.shared.localizedString(forKey: "Enter value"),
                         text: Binding(
                             get: { viewModel.formData[field.name] ?? "" },
                             set: { newValue in
@@ -57,6 +60,7 @@ struct DynamicFieldsView: View {
                     }
                 }
                 .padding(.horizontal)
+                .padding(.bottom, 8)
             }
         }
     }

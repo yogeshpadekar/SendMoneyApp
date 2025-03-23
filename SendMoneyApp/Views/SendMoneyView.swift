@@ -4,6 +4,7 @@
 //
 //  Created by Yogesh Padekar on 22/03/25.
 //
+import SwiftUI
 
 import SwiftUI
 
@@ -11,7 +12,7 @@ struct SendMoneyView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = SendMoneyViewModel()
 
-    // ✅ State to control toast visibility
+    // ✅ State for toast notification
     @State private var showToast: Bool = false
     @State private var toastMessage: String = ""
 
@@ -19,8 +20,6 @@ struct SendMoneyView: View {
         NavigationStack {
             ZStack {
                 VStack(spacing: 20) {
-                    // Title
-                    HeaderView(title: viewModel.title)
 
                     // Service Picker
                     ServicePickerView(viewModel: viewModel)
@@ -30,12 +29,10 @@ struct SendMoneyView: View {
 
                     // Dynamic Fields
                     DynamicFieldsView(viewModel: viewModel)
-                        .padding(.bottom, 20)
 
                     // Save Button
                     SaveButtonView(viewModel: viewModel, appState: appState, onSuccess: {
-                        // ✅ Show toast on successful save
-                        showToastMessage("Request saved successfully!")
+                        showToastMessage(LanguageManager.shared.localizedString(forKey: "Request saved successfully!"))
                     })
                         .padding(.bottom, 20)
                 }
@@ -43,7 +40,7 @@ struct SendMoneyView: View {
                     viewModel.loadData()
                 }
 
-                // ✅ Toast display
+                // ✅ Toast Display
                 if showToast {
                     VStack {
                         Spacer()
@@ -54,15 +51,29 @@ struct SendMoneyView: View {
                     }
                 }
             }
+            .navigationTitle(LanguageManager.shared.localizedString(forKey: "Send Money"))
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    LanguageButton()
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(destination: SavedRequestsView()) {
+                        Image(systemName: "tray.full")
+                            .font(.title2)
+                            .foregroundColor(.blue)
+                            .accessibilityLabel(LanguageManager.shared.localizedString(forKey: "View Requests"))
+                    }
+                }
+            }
         }
     }
 
-    // ✅ Function to show toast with auto-dismiss
+    // ✅ Toast message
     private func showToastMessage(_ message: String) {
         toastMessage = message
         showToast = true
 
-        // Auto-dismiss after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             withAnimation {
                 showToast = false

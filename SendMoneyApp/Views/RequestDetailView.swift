@@ -21,7 +21,7 @@ struct RequestDetailView: View {
                 .foregroundColor(.black)
                 .padding()
         }
-        .navigationTitle("Request JSON")
+        .navigationTitle(LanguageManager.shared.localizedString(forKey: "Request JSON"))
     }
 
     // ✅ Convert request data to pretty-formatted JSON

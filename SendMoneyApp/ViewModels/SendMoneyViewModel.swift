@@ -37,7 +37,7 @@ class SendMoneyViewModel: ObservableObject {
             let decoder = JSONDecoder()
             let decodedData = try decoder.decode(SendMoneyData.self, from: data)
 
-            title = decodedData.title["en"] ?? "Send Money"
+            title =  LanguageManager.shared.localizedFromJSON(dict: decodedData.title) ?? LanguageManager.shared.localizedString(forKey: "Send Money")
             services = decodedData.services
 
             updateProviders()

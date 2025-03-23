@@ -38,7 +38,7 @@ struct SavedRequestsView: View {
 
                     // ✅ View JSON Button
                     NavigationLink(destination: RequestDetailView(request: request)) {
-                        Text("View JSON")
+                        Text(LanguageManager.shared.localizedString(forKey: "View JSON"))
                             .foregroundColor(.white)
                             .padding(.vertical, 8)
                             .padding(.horizontal, 12)
@@ -48,7 +48,7 @@ struct SavedRequestsView: View {
                 }
                 .padding(.vertical, 8)
             }
-            .navigationTitle("Saved Requests")
+            .navigationTitle(LanguageManager.shared.localizedString(forKey: "Saved Requests"))
         }
     }
 }

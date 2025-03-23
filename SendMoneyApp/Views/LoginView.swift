@@ -15,15 +15,15 @@ struct LoginView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            TextField("Username", text: $username)
+            TextField(LanguageManager.shared.localizedString(forKey: "Username"), text: $username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            SecureField("Password", text: $password)
+            SecureField(LanguageManager.shared.localizedString(forKey: "Password"), text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            Button("Login") {
+            Button(LanguageManager.shared.localizedString(forKey: "LOGIN")) {
                 if username.lowercased() == "testuser" && password == "password123" {
                     appState.isLoggedIn = true
                 } else {
@@ -36,11 +36,11 @@ struct LoginView: View {
             .cornerRadius(8)
 
             if showError {
-                Text("Invalid credentials").foregroundColor(.red)
+                Text(LanguageManager.shared.localizedString(forKey: "InvalidCredentials")).foregroundColor(.red)
             }
         }
         .padding()
-        .navigationTitle("Login")
+        .navigationTitle(LanguageManager.shared.localizedString(forKey: "LOGIN"))
 
         // Navigate to SendMoneyView with in-memory state management
         .fullScreenCover(isPresented: $appState.isLoggedIn) {

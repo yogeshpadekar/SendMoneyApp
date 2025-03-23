@@ -13,7 +13,7 @@ struct ProviderPickerView: View {
 
     var body: some View {
         DropDownView(
-            title: "Provider",
+            title: LanguageManager.shared.localizedString(forKey: "Provider"),
             options: viewModel.providers.map { $0.name },
             selectedOption: Binding(
                 get: {

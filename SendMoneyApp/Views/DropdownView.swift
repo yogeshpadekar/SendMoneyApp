@@ -20,7 +20,7 @@ struct DropDownView: View {
                 .font(.headline)
                 .foregroundColor(.primary)
 
-            // ✅ Drop-down Button
+            // Drop-down Button
             Button(action: {
                 withAnimation {
                     isExpanded.toggle()

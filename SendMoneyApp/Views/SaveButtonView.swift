@@ -14,7 +14,7 @@ struct SaveButtonView: View {
     var onSuccess: () -> Void  // Closure to trigger toast
 
     var body: some View {
-        Button("SEND") {
+        Button(LanguageManager.shared.localizedString(forKey: "SEND")) {
             viewModel.saveRequest(appState: appState)
 
             // Trigger the success closure only when validation passes

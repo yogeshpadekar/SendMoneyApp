@@ -12,16 +12,16 @@ struct ServicePickerView: View {
 
     var body: some View {
         DropDownView(
-            title: "Service",
-            options: viewModel.services.map { $0.label["en"] ?? "Unknown Service" },
+            title: LanguageManager.shared.localizedString(forKey: "Service"),
+            options: viewModel.services.map { LanguageManager.shared.localizedFromJSON(dict: $0.label) ?? LanguageManager.shared.localizedString(forKey: "Unknown Service") },
             selectedOption: Binding(
                 get: {
                     viewModel.services.indices.contains(viewModel.selectedServiceIndex) ?
-                    viewModel.services[viewModel.selectedServiceIndex].label["en"] ?? "" :
+                    LanguageManager.shared.localizedFromJSON(dict: viewModel.services[viewModel.selectedServiceIndex].label) ?? "" :
                     ""
                 },
                 set: { newValue in
-                    if let index = viewModel.services.firstIndex(where: { $0.label["en"] == newValue }) {
+                    if let index = viewModel.services.firstIndex(where: { LanguageManager.shared.localizedFromJSON(dict: $0.label) == newValue }) {
                         viewModel.selectedServiceIndex = index
                         viewModel.updateProviders()  // ✅ Update providers dynamically
                     }
