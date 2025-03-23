@@ -2,15 +2,33 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Amount: %@" : {
+      "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المبلغ: %@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amount: %@"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
+    },
+    "Back" : {
+      "comment" : "Back button title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رجوع"
+          }
+        }
+      }
     },
     "Change Language" : {
       "extractionState" : "manual",
@@ -144,6 +162,7 @@
     },
     "Provider: %@" : {
       "comment" : "Provider value with label",
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -151,8 +170,7 @@
             "value" : "المزود: %@"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Request ID: %@" : {
       "comment" : "Request ID value with label",
@@ -164,8 +182,7 @@
             "value" : "معرف الطلب: %@"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Request JSON" : {
       "extractionState" : "manual",
@@ -185,23 +202,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "تم حفظ الطلب بنجاح!"
-          }
-        }
-      }
-    },
-    "Save" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "حفظ"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SAVE"
           }
         }
       }
@@ -263,6 +263,7 @@
       }
     },
     "Service: %@" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -270,8 +271,7 @@
             "value" : "الخدمة: %@"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Unknown Service" : {
       "extractionState" : "manual",

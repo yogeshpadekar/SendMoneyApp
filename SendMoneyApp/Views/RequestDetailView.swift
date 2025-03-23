@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RequestDetailView: View {
     let request: SendMoneyRequest
+    @EnvironmentObject var appState: AppState
 
     var body: some View {
         ScrollView {

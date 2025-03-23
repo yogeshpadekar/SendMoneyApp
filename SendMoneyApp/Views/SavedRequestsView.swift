@@ -16,20 +16,23 @@ struct SavedRequestsView: View {
             List(appState.savedRequests) { request in
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Request ID: \(request.id)")
+                        Text(LanguageManager.shared.localizedString(forKey: "Request ID: %@",
+                                                                    arguments: request.id))
                             .font(.caption)
                             .foregroundColor(.gray)
-
-                        Text("Service: \(request.service)")
+                        Text(LanguageManager.shared.localizedString(forKey: "Service: %@",
+                                                                    arguments: request.service))
                             .font(.headline)
                             .foregroundColor(.primary)
 
-                        Text("Provider: \(request.provider)")
+                        Text(LanguageManager.shared.localizedString(forKey: "Provider: %@",
+                                                                    arguments: request.provider))
                             .font(.subheadline)
                             .foregroundColor(.secondary)
 
                         if let amount = request.formData["amount"] {
-                            Text("Amount: \(amount)")
+                            Text(LanguageManager.shared.localizedString(forKey: "Amount: %@",
+                                                                        arguments: amount))
                                 .font(.subheadline)
                                 .foregroundColor(.blue)
                         }

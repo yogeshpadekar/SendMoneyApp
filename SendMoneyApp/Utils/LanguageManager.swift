@@ -6,14 +6,14 @@
 //
 
 
-import SwiftUI
+import Foundation
 
 class LanguageManager: ObservableObject {
     static let shared = LanguageManager()
-    @EnvironmentObject var appState: AppState
+
     private var bundle: Bundle = .main
 
-    // ✅ Set the language at runtime
+    // ✅ Dynamically load the language bundle
     func setLanguage(_ language: String) {
         if let path = Bundle.main.path(forResource: language, ofType: "lproj"),
            let newBundle = Bundle(path: path) {
@@ -21,14 +21,13 @@ class LanguageManager: ObservableObject {
         } else {
             bundle = .main
         }
-
-        // ✅ Notify the app to reload the localization instantly
         objectWillChange.send()
     }
 
-    // ✅ Get localized string dynamically
-    func localizedString(forKey key: String) -> String {
-        return NSLocalizedString(key, tableName: nil, bundle: bundle, value: "\(key)", comment: "")
+    // ✅ Localized string method with placeholder support
+    func localizedString(forKey key: String, arguments: CVarArg...) -> String {
+        let format = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "\(key)", comment: "")
+        return String(format: format, arguments: arguments)
     }
 
     func localizedFromJSON(dict: [String: String]) -> String? {

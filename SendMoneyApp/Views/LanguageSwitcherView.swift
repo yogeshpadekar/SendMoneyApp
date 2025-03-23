@@ -31,18 +31,6 @@ struct LanguageSwitcherView: View {
                 }
                 .pickerStyle(WheelPickerStyle())
                 .frame(height: 150)
-
-                // ✅ Save & Dismiss Button
-                Button(LanguageManager.shared.localizedString(forKey: "Save")) {
-                    // ✅ Save language & apply instantly
-                    LanguageManager.shared.setLanguage(appState.selectedLanguage)
-                    dismiss()
-                }
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(10)
             }
             .padding()
             .navigationTitle(LanguageManager.shared.localizedString(forKey: "Language"))
