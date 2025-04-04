@@ -29,13 +29,6 @@
 			);
 			target = 95B45F3C2D8EB9E200220C32 /* SendMoneyApp */;
 		};
-		95B73EE42D90809500E8600F /* Exceptions for "SendMoneyAppTests" folder in "SendMoneyAppTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				LanguageManagerTests.swift,
-			);
-			target = 95B45F4E2D8EB9E500220C32 /* SendMoneyAppTests */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -68,7 +61,6 @@
 		95B45F522D8EB9E500220C32 /* SendMoneyAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				95B73EE42D90809500E8600F /* Exceptions for "SendMoneyAppTests" folder in "SendMoneyAppTests" target */,
 				95B73EE52D90809500E8600F /* Exceptions for "SendMoneyAppTests" folder in "Copy Bundle Resources" phase from "SendMoneyAppTests" target */,
 			);
 			path = SendMoneyAppTests;

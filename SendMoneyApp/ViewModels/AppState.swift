@@ -26,7 +26,6 @@ class AppState: ObservableObject {
 
     init() {
         selectedLanguage = UserDefaults.standard.string(forKey: Constants.userDefaultsLanguageKey) ?? Constants.englishLanguageKey
-        LanguageManager.shared.setLanguage(selectedLanguage)
     }
 
     // Save request in memory

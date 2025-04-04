@@ -6,12 +6,13 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import SendMoneyApp
 
 final class LanguageManagerTests: XCTestCase {
 
     var languageManager: LanguageManager!
-
+    private var appState = AppState()
 
 
     override func setUpWithError() throws {
@@ -40,9 +41,11 @@ final class LanguageManagerTests: XCTestCase {
 
     // Test JSON Localization
     func testLocalizedFromJSON() {
+        let prevLanguage = appState.selectedLanguage
+        appState.selectedLanguage = Constants.arabicLanguageKey
         let jsonDict = ["en": "Send Money", "ar": "إرسال الأموال"]
-        let localized = languageManager.localizedFromJSON(dict: jsonDict, languageCode: "ar")
-
+        let localized = languageManager.localizedFromJSON(dict: jsonDict)
+        appState.selectedLanguage = prevLanguage
         XCTAssertEqual(localized, "إرسال الأموال", "Localized string should be in Arabic")
     }
 }
