@@ -1,6 +1,6 @@
 # 💰 Send Money App
 
-### A modern iOS app for sending money with dynamic forms, localization, and in-memory state management.
+### A modern iOS app POC for sending money with dynamic forms, localization, and in-memory state management.
 
 ---
 
